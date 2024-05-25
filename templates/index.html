@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BGEN</title>
+    {% load static %}
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<body>
+    <!--nav -->
+    <nav class="navbar">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">BGEN</span>
+          <span class="navbar-text">
+             generate your own BGM for your video
+          </span>
+      </div>
+    </nav>
+    
+    
+    <!--Prompt-->
+    <div class="container mt-5">
+        <div class="row mb-4">
+        
+            <div class="col-md-6">
+                <div class="prompt-section">
+                    <form method="post" action="{% url 'generate_audio' %}">
+                        {% csrf_token %}
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">AUTOMATIC PROMPT</h4>
+                                <div class="form-group">
+                                    <textarea id="ai" name="aiPrompt" class="form-control" rows="5">{% if aiPrompt %}{{ aiPrompt }}{% endif %}</textarea>
+                                    <input type="checkbox" id="aiCheckbox" name="aiCheckbox" value="ai" > use this automatic prompting
+                                </div>
+                                <h4 class="card-title">USER PROMPT</h4>
+                                <div class="form-group">
+                                    <textarea id="user" name="userPrompt" class="form-control" rows="5">{% if userPrompt %}{{ userPrompt }}{% endif %}</textarea>
+                                </div>
+                                <button type="submit" class="btn btn-success">Generate</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        
+            
+        
+            <!--Video-->
+            <div class="col-md-6">
+                <div class="video-container">
+                    <video id="preview" width="550" height="500" controls preload>
+                        {% if video_url %}
+                            <source src="{{ video_url }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        {% endif %}
+                    </video>
+                </div>
+            
+            
+                <!--Upload-->
+                <form method="post" enctype="multipart/form-data" action="{% url 'handle_video_edit' %}" class="upload-form mt-3">
+                    {% csrf_token %}
+                    <div class="form-group form-row align-items-center">
+                        <label for="video" class="col-sm-3 col-form-label">동영상 선택:</label>
+                        <div class="col-sm-9">
+                            <input type="file" accept="video/*" id="videoInput" name="video" class="form-control-file">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="start">Start:</label>
+                        <input type="number" id="start" name="start" class="form-control" value="{% if start %}{{ start }}{% endif %}">
+                    </div>
+                    <div class="form-group">
+                        <label for="end">End:</label>
+                        <input type="number" id="end" name="end" class="form-control" value="{% if end %}{{ end }}{% endif %}">
+                    </div>
+                    <button type="submit" name="action" value="clip" class="btn btn-primary">Clip</button>
+                    <button type="submit" name="action" value="add_bgm" class="btn btn-secondary">Add BGM</button>
+                    {% if video_name %}
+                        <p>Selected video: {{ video_name }}</p>
+                    {% endif %}
+                </form>
+            </div>
+       
+        </div>
+
+        <!--BGM-->
+        <div class="audio-container text-center mb-4">
+            <audio src="../media/audios/new_bgm.mp3" controls class="audio-control"></audio>
+        </div>
+
+        {% if edited_video_url %}
+            <h2 class="text-center">편집된 동영상 보기</h2>
+            <div class="video-container text-center">
+                <video controls class="img-fluid">
+                    <source src="{{ edited_video_url }}" type="video/mp4">
+                    해당 브라우저에서 동영상을 지원하지 않습니다.
+                </video>
+            </div>
+        {% endif %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const videoInput = document.getElementById('videoInput');
+        const preview = document.getElementById('preview');
+
+        videoInput.addEventListener('change', function() {
+            const file = this.files[0];
+            preview.src = URL.createObjectURL(file);
+        });
+    </script>
+</body>
+</html>
