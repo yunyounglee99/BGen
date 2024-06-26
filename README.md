@@ -9,11 +9,9 @@
 ## 🧑‍💻 팀원
 
 **이윤영**
-  - 기획
   - [@yunyounglee99](https://github.com/yunyounglee99)
     
 **이형원**
-  - 개발
   - [@hwstar-1204](https://github.com/hwstar-1204) 
 
 
