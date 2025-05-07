@@ -11,7 +11,7 @@
 - **결과물**: 
 
 #### 결과 영상 (원본은 무음 영상)
-[![BGen 샘플 데모](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://youtu.be/OungXXpJo4U)
+[![BGen 샘플 데모](https://img.youtube.com/vi/OungXXpJo4U/0.jpg)](https://youtu.be/OungXXpJo4U)
 
 ## 🚀 프로젝트 개요
 
