@@ -12,11 +12,7 @@
 
 | 원본 영상 | BGM 적용 후 |
 |---------|------------|
-| ![원본]https://github.com/user-attachments/assets/0ec7ae32-6fb8-49ab-9f92-1038d5f8d6f7
-
- | ![결과]https://github.com/user-attachments/assets/5b3291cb-0445-43fc-97c3-d4175839d6a4
-
- |
+| ![원본] https://github.com/user-attachments/assets/0ec7ae32-6fb8-49ab-9f92-1038d5f8d6f7 | ![결과] https://github.com/user-attachments/assets/5b3291cb-0445-43fc-97c3-d4175839d6a4 |
 
 ## 🚀 프로젝트 개요
 
