@@ -1,87 +1,73 @@
-# 🎵 BGen: BGM Generator for YouTubers
+🎵 BGen: BGM Generator for YouTubers
+A project that helps solo YouTubers easily select BGM that matches specific sections of their videos. This project uses Gen AI to create BGM with the mood desired by the user.
+🎬 Usage Examples and Demo
+Sample 1
 
-1인 유튜버들이 동영상의 특정 구간에 어울리는 BGM을 쉽게 선정할 수 있도록 도와주는 프로젝트입니다. 이 프로젝트는 Gen AI를 활용하여 사용자가 원하는 느낌의 BGM을 생성합니다.
+Original Video Section: 2-6 seconds
+User Prompt: "Bright and joyful festival atmosphere"
+Result:
 
-
-## 🎬 사용 예시 및 데모
-
-### 샘플 1
-- **원본 영상 구간**: 2초-6초
-- **사용자 프롬프트**: "밝고 즐거운 축제분위기"
-- **결과물**: 
-
-#### 결과 영상 (원본은 무음 영상)
+Result Video (original is silent)
 [![BGen 샘플 데모](https://img.youtube.com/vi/OungXXpJo4U/0.jpg)](https://youtu.be/OungXXpJo4U)
 
-## 🚀 프로젝트 개요
+🚀 Project Overview
+You can generate BGM that suits specific sections of a video through Gen AI.
+🧑‍💻 Team Members
+Yunyoung Lee
 
-동영상의 특정 구간에 어울리는 BGM을 Gen AI를 통해 생성해 낼 수 있습니다. 
+@yunyounglee99
 
-## 🧑‍💻 팀원
+Hyungwon Lee
 
-**이윤영**
-  - [@yunyounglee99](https://github.com/yunyounglee99)
-    
-**이형원**
-  - [@hwstar-1204](https://github.com/hwstar-1204) 
+@hwstar-1204
 
+📚 Implemented Features
+📌 Video Section Editing
 
-## 📚 구현 기능
+Implemented using ffmpeg and MoviePy libraries to save and edit video sections specified by the user
 
-### 📌 동영상 구간 편집
-- 사용자가 지정한 영상 구간을 저장 및 편집하기 위해 ffmpeg, MoviePy 라이브러리를 사용하여 구현
+📌 Video to Text Summarization
 
-### 📌 동영상을 텍스트로 요약
-- 사용자가 원하는 구간의 동영상을 이해하기 위해 Twelve Laps API를 사용하여 텍스트 요약 생성
-- 과정: Video upload → Twelve Laps API → Text Summery
+Uses Twelve Laps API to generate text summaries to understand the user's desired video section
+Process: Video upload → Twelve Laps API → Text Summary
 
-### 📌 사용자가 원하는 느낌의 BGM 생성
-- 사용자의 요구사항을 파악하기 위해 User Prompt를 작성받아 audiocraft API를 사용하여 어울리는 BGM 생성
-- 과정: AI와 User의 공동 Prompt → audiocraft API → Generate BGM
+📌 Generation of User-Desired BGM
 
-## 🛠 사용한 기술
+Collects User Prompt to understand requirements and uses audiocraft API to generate matching BGM
+Process: AI and User collaborative Prompt → audiocraft API → Generate BGM
 
--**Django**: full stack 웹 프레임워크 
-- **ffmpeg**: 동영상 편집 및 처리
-- **MoviePy**: 파이썬 기반의 동영상 편집 라이브러리
-- **Twelve Laps API**: 동영상의 텍스트 요약을 위한 API
-- **audiocraft API**: 요약된 동영상 프롬프트와 사용자 프롬프트 기반의 BGM 생성 API
+🛠 Technologies Used
 
-## 📝 설치 및 실행 방법
+Django: full stack web framework
+ffmpeg: video editing and processing
+MoviePy: Python-based video editing library
+Twelve Laps API: API for video text summarization
+audiocraft API: BGM generation API based on summarized video prompts and user prompts
 
-1. 이 저장소를 클론합니다.
-    ```bash
-    git clone https://github.com/your-username/BGen.git
-    cd BGen
-    ```
+📝 Installation and Execution
 
-2. 가상 환경을 설정하고 필요한 패키지를 설치합니다.
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # Windows에서는 `venv\Scripts\activate`
-    pip install -r requirements.txt
-    ```
+Clone this repository.
+bashgit clone https://github.com/your-username/BGen.git
+cd BGen
 
-3. Twelve Laps API 키와 Hugging Face 인증 토큰을 환경 변수로 설정합니다.
-    ```bash
-    export TWELVE_LAPS_API_KEY='your_twelve_laps_api_key'
-    export HUGGINGFACE_TOKEN='your_huggingface_token'
-    ```
+Set up a virtual environment and install the required packages.
+bashpython -m venv venv
+source venv/bin/activate  # On Windows: `venv\Scripts\activate`
+pip install -r requirements.txt
 
-4. Django 서버를 실행합니다.
-    ```bash
-    python manage.py runserver
-    ```
+Set Twelve Laps API key and Hugging Face authentication token as environment variables.
+bashexport TWELVE_LAPS_API_KEY='your_twelve_laps_api_key'
+export HUGGINGFACE_TOKEN='your_huggingface_token'
 
-5. 웹 브라우저에서 `http://localhost:8000`을 열어 애플리케이션을 사용합니다.
+Run the Django server.
+bashpython manage.py runserver
 
-## ⚠️ 주의 사항
+Open http://localhost:8000 in your web browser to use the application.
 
-- **Twelve Laps API**를 사용하기 위해서는 Twelve Laps API 키가 필요합니다.
-- **Hugging Face**의 인증 토큰이 필요합니다.
+⚠️ Precautions
 
+A Twelve Laps API key is required to use the Twelve Laps API.
+A Hugging Face authentication token is required.
 
-## 📜 라이센스
-
-이 프로젝트는 MIT 라이센스를 따릅니다. 자세한 내용은 [LICENSE](./LICENSE) 파일을 참고하세요.
-
+📜 License
+This project follows the MIT license. For more details, please refer to the LICENSE file.
