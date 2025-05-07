@@ -10,9 +10,8 @@
 - **사용자 프롬프트**: "밝고 즐거운 축제분위기"
 - **결과물**: 
 
-| 원본 영상 | BGM 적용 후 |
-|---------|-----------|
-| ![원본](https://github.com/user-attachments/assets/0ec7ae32-6fb8-49ab-9f92-1038d5f8d6f7) | ![결과](https://github.com/user-attachments/assets/5b3291cb-0445-43fc-97c3-d4175839d6a4) |
+#### 결과 영상 (원본은 무음 영상)
+[![BGen 샘플 데모](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://youtu.be/OungXXpJo4U)
 
 ## 🚀 프로젝트 개요
 
