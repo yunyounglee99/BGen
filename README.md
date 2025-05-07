@@ -12,6 +12,7 @@ You can generate BGM that suits specific sections of a video through Gen AI.
 ## 🧑‍💻  Team Members
 Yun-young Lee
   - [@yunyounglee99](https://github.com/yunyounglee99)
+
 Hyung-won Lee
   - [@hwstar-1204](https://github.com/hwstar-1204) 
 ## 📚 Implemented Features
