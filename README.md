@@ -1,6 +1,6 @@
 # 🎵 BGen: BGM Generator for YouTubers
 A project designed to help solo YouTubers easily select BGM that matches specific sections of their videos. This project uses Gen AI to create BGM with the mood desired by the user.
-## 🎬 사용 예시 및 데모
+## 🎬 Usage Examples and Demo
 ### Sample 1
 - Original Video Section: 2-6 seconds
 - User Prompt: "Bright and joyful festival atmosphere" (In Korean)
