@@ -6,7 +6,7 @@ A project designed to help solo YouTubers easily select BGM that matches specifi
 - User Prompt: "Bright and joyful festival atmosphere" (In Korean)
 - Result:
 #### Result Video (Click the image)
-[![puripuri 샘플 데모](https://img.youtube.com/vi/PtFMO7HUpOM?si=3OCWcjJ5sbbOYe7p/0.jpg)](https://youtu.be/PtFMO7HUpOM?si=3OCWcjJ5sbbOYe7p))
+[![puripuri 샘플 데모](https://img.youtube.com/vi/PtFMO7HUpOM?si=3OCWcjJ5sbbOYe7p/0.jpg)](https://youtu.be/PtFMO7HUpOM?si=3OCWcjJ5sbbOYe7p)
 ## 🚀 Project Overview
 You can generate BGM that suits specific sections of a video through Gen AI.
 ## 🧑‍💻  Team Members
