@@ -40,21 +40,27 @@ Hyung-won Lee
    ```
     
 3. Set up a virtual environment and install the necessary packages.
+   ```
     bash
     python -m venv venv
     source venv/bin/activate  # Windows에서는 `venv\Scripts\activate`
     pip install -r requirements.txt
-    
-4. Set the Twelve Laps API key and Hugging Face authentication token as environment variables.
+   ```
+   
+5. Set the Twelve Laps API key and Hugging Face authentication token as environment variables.
+   ```
     bash
     export TWELVE_LAPS_API_KEY='your_twelve_laps_api_key'
     export HUGGINGFACE_TOKEN='your_huggingface_token'
+   ```
     
-5. Run the Django server.
+7. Run the Django server.
+   ```
     bash
     python manage.py runserver
+   ```
     
-6. Open http://localhost:8000 in your web browser to use the application.
+9. Open http://localhost:8000 in your web browser to use the application.
 ## ⚠️ Precautions
 - A Twelve Laps API key is required to use the Twelve Laps API.
 - A Hugging Face authentication token is required.
