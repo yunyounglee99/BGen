@@ -33,26 +33,28 @@ Hyung-won Lee
 - audiocraft API: BGM generation API based on summarized video prompts and user prompts
 ## 📝 Installation and Execution Method
 1. Clone this repository.
+   ```
     bash
     git clone https://github.com/your-username/BGen.git
     cd BGen
+   ```
     
-2. Set up a virtual environment and install the necessary packages.
+3. Set up a virtual environment and install the necessary packages.
     bash
     python -m venv venv
     source venv/bin/activate  # Windows에서는 `venv\Scripts\activate`
     pip install -r requirements.txt
     
-3. Set the Twelve Laps API key and Hugging Face authentication token as environment variables.
+4. Set the Twelve Laps API key and Hugging Face authentication token as environment variables.
     bash
     export TWELVE_LAPS_API_KEY='your_twelve_laps_api_key'
     export HUGGINGFACE_TOKEN='your_huggingface_token'
     
-4. Run the Django server.
+5. Run the Django server.
     bash
     python manage.py runserver
     
-5. Open http://localhost:8000 in your web browser to use the application.
+6. Open http://localhost:8000 in your web browser to use the application.
 ## ⚠️ Precautions
 - A Twelve Laps API key is required to use the Twelve Laps API.
 - A Hugging Face authentication token is required.
